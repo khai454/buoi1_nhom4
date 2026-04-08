@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := baitapbuoi1_2
+BUILD_ARTIFACT_NAME := Projectdautien
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-baitapbuoi1_2.elf \
+Projectdautien.elf \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-baitapbuoi1_2.list \
+Projectdautien.list \
 
 OBJCOPY_BIN += \
-baitapbuoi1_2.bin \
+Projectdautien.bin \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: baitapbuoi1_2.elf secondary-outputs
+main-build: Projectdautien.elf secondary-outputs
 
 # Tool invocations
-baitapbuoi1_2.elf: $(OBJS) $(USER_OBJS) C:\Users\PC\Desktop\bai\ bao\ cao\ ben\ mindx\New\ folder\baitapbuoi1_2\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "baitapbuoi1_2.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\PC\Desktop\bai bao cao ben mindx\New folder\baitapbuoi1_2\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="baitapbuoi1_2.map" -Wl,--gc-sections -static -L"C:\Users\PC\Desktop\bai bao cao ben mindx\SDK_1.0.3_NUCLEO-F401RE\lib_stm" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Projectdautien.elf: $(OBJS) $(USER_OBJS) C:\Users\PC\Documents\nhom\ 4\ to\ th3\New\ folder\STM32F401RETX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "Projectdautien.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"C:\Users\PC\Documents\nhom 4 to th3\New folder\STM32F401RETX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Projectdautien.map" -Wl,--gc-sections -static -L"C:\Users\PC\Desktop\bai bao cao ben mindx\SDK_1.0.3_NUCLEO-F401RE\lib_stm" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,19 +70,19 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-baitapbuoi1_2.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "baitapbuoi1_2.list"
+Projectdautien.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "Projectdautien.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
-baitapbuoi1_2.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "baitapbuoi1_2.bin"
+Projectdautien.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "Projectdautien.bin"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) $(SIZE_OUTPUT)$(OBJDUMP_LIST)$(EXECUTABLES)$(OBJS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(OBJCOPY_BIN) baitapbuoi1_2.elf
+	-$(RM) $(SIZE_OUTPUT)$(OBJDUMP_LIST)$(EXECUTABLES)$(OBJS)$(S_DEPS)$(S_UPPER_DEPS)$(C_DEPS)$(OBJCOPY_BIN) Projectdautien.elf
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_BIN)

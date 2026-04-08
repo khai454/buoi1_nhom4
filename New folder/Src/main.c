@@ -18,6 +18,7 @@
  */
 
 #include <stdint.h>
+
 #include <stdint.h>
 #include <timer.h>
 #include <Ucglib.h>
@@ -34,7 +35,7 @@ int main(void)
     ucg_ClearScreen(&ucg);
 
     ucg_SetFont(&ucg, ucg_font_helvR08_tf);   // lựa chọn font chữ và cỡ chữ
-    ucg_SetColor(&ucg, 0, 255, 255, 255);     // chọn màu chữ là màu trắng
+    ucg_SetColor(&ucg, 0, 255, 0 , 0);     // chọn màu chữ là màu trắng
     ucg_SetColor(&ucg, 1, 0, 0, 0);           // màu background là màu đen
     ucg_SetRotate180(&ucg);                   // quay màn hình lại 180 độ
     ucg_DrawString(&ucg, 0, 12, 0, "I love Embedded");   // in dòng chữ ra LCD

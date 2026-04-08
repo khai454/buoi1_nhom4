@@ -1,5 +1,5 @@
 
-baitapbuoi1_2.elf:     file format elf32-littlearm
+Projectdautien.elf:     file format elf32-littlearm
 
 Sections:
 Idx Name          Size      VMA       LMA       File off  Algn
@@ -39,11 +39,11 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  17 .debug_line   000075b6  00000000  00000000  00067ae8  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    00045a9e  00000000  00000000  0006f09e  2**0
+ 18 .debug_str    00045a8a  00000000  00000000  0006f09e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      000000ce  00000000  00000000  000b4b3c  2**0
+ 19 .comment      000000ce  00000000  00000000  000b4b28  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00002130  00000000  00000000  000b4c0c  2**2
+ 20 .debug_frame  00002130  00000000  00000000  000b4bf8  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -104,10 +104,10 @@ int main(void)
  80001f0:	4915      	ldr	r1, [pc, #84]	; (8000248 <main+0x74>)
  80001f2:	4814      	ldr	r0, [pc, #80]	; (8000244 <main+0x70>)
  80001f4:	f001 fe3c 	bl	8001e70 <ucg_SetFont>
-    ucg_SetColor(&ucg, 0, 255, 255, 255);     // chọn màu chữ là màu trắng
- 80001f8:	23ff      	movs	r3, #255	; 0xff
+    ucg_SetColor(&ucg, 0, 255, 0 , 0);     // chọn màu chữ là màu trắng
+ 80001f8:	2300      	movs	r3, #0
  80001fa:	9300      	str	r3, [sp, #0]
- 80001fc:	23ff      	movs	r3, #255	; 0xff
+ 80001fc:	2300      	movs	r3, #0
  80001fe:	22ff      	movs	r2, #255	; 0xff
  8000200:	2100      	movs	r1, #0
  8000202:	4810      	ldr	r0, [pc, #64]	; (8000244 <main+0x70>)
